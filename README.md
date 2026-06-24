@@ -28,18 +28,11 @@ A modern full-stack task management application built with Next.js, TypeScript, 
 
 ### Home Page
 
-Add application screenshots inside:
+![Task Manager Pro - Home](public/screenshots/home-page.png)
 
-```text
-public/screenshots/
-```
+### Add New Task Modal
 
-Example screenshots:
-
-* Dashboard
-* Create Task Form
-* Edit Task Modal
-* Mobile View
+![Add New Task](public/screenshots/add-task.png)
 
 ## 📁 Project Structure
 
@@ -72,7 +65,9 @@ MONGODB_URI=your_mongodb_connection_string
 
 ## 🌐 Live Demo
 
-Add your deployed Vercel URL here.
+[https://task-manager-b925-5hasoz600-patelpari7061-7961s-projects.vercel.app/](https://task-manager-b925-5hasoz600-patelpari7061-7961s-projects.vercel.app/)
+
+(Production URL: [https://task-manager-b925.vercel.app/](https://task-manager-b925.vercel.app/))
 
 ## 👤 Author
 
