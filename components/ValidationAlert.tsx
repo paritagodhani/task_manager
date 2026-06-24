@@ -23,7 +23,7 @@ export const ValidationAlert: React.FC<ValidationAlertProps> = ({ message, type,
   };
 
   React.useEffect(() => {
-    if (type === 'success') {
+    if (type === 'success' && onClose) {
       const timer = setTimeout(onClose, 3000);
       return () => clearTimeout(timer);
     }

@@ -52,7 +52,7 @@ export function TaskCard({ task, onDelete, onToggle, onEdit }: TaskCardProps) {
         <div className="flex items-start gap-3 flex-1">
           <motion.input
             type="checkbox"
-            checked={task.completed}
+            checked={task.completed ?? false}
             onChange={handleToggle}
             disabled={isToggling}
             className="w-5 h-5 mt-1 cursor-pointer accent-emerald-500"
