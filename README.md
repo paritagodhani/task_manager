@@ -18,16 +18,18 @@ Manage your tasks with full CRUD operations, priority filters, status tracking, 
 
 ## ✨ Features
 
-* Create Tasks
-* Edit Tasks
-* Delete Tasks
-* Mark Tasks as Completed
-* Priority Levels (Low, Medium, High)
-* Filter by Priority and Status
-* Dashboard Statistics
-* MongoDB Database Integration
-* Responsive Design
-* Smooth User Experience
+* **Create & Edit Tasks** — Add or update tasks using a sleek modal form.
+  
+  ![Add New Task Form](public/screenshots/form.png)
+
+* **Delete Tasks** — Delete tasks easily with custom actions.
+* **Mark Tasks as Completed** — Animated completion checkmark with title strikethrough.
+* **Priority Levels** — Low, Medium, and High task classifications.
+* **Filter by Priority & Status** — Instantly filter tasks on the dashboard.
+* **Dashboard Statistics** — Tracks Total, Pending, Completed, and High-Priority tasks.
+* **MongoDB Database Integration** — Mongoose schemas for data persistence.
+* **Responsive Design** — Fully optimized for mobile, tablet, and desktop views.
+* **Smooth User Experience** — Micro-animations powered by Framer Motion.
 
 ---
 
