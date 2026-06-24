@@ -64,6 +64,7 @@ task_manager_pro/
 │   ├── mongodb.ts
 │   └── models/Task.ts
 ├── .env.example
+├── AI_USAGE.md
 └── README.md
 ```
 
@@ -162,6 +163,31 @@ http://localhost:3000
 * Dashboard Statistics
 * Responsive Layout
 * MongoDB Data Persistence
+
+---
+
+## 🌐 Deployment (Vercel / Render)
+
+### Deploy to Vercel
+1. Push this repository to your GitHub account.
+2. Import the project on [Vercel](https://vercel.com).
+3. Set the Environment Variable in Vercel settings:
+   - `MONGODB_URI`: Your MongoDB Atlas (Cloud) connection string.
+4. Click **Deploy**.
+
+### Deploy to Render
+1. Create a Web Service on [Render](https://render.com).
+2. Connect your GitHub repository.
+3. Set the Build Command to `pnpm build` and Start Command to `pnpm start`.
+4. Set the Environment Variable:
+   - `MONGODB_URI`: Your MongoDB Atlas (Cloud) connection string.
+5. Click **Create Web Service**.
+
+---
+
+## 🤖 AI Usage Documentation
+
+This project was developed with the assistance of AI. For detailed information about how AI was used, prompts, and modifications, refer to [AI_USAGE.md](./AI_USAGE.md).
 
 ---
 
