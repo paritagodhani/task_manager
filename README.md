@@ -1,70 +1,60 @@
-<div align="center">
-
 # 📋 Task Manager Pro
 
-### A Modern, Full-Stack Task Management Application
+### A Modern Full-Stack Task Management Application
 
-[![Next.js](https://img.shields.io/badge/Next.js-16.2.6-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-7.3.0-green?style=for-the-badge&logo=mongodb)](https://www.mongodb.com/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.7.3-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.2.0-38bdf8?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/)
-[![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.x-purple?style=for-the-badge&logo=framer)](https://www.framer.com/motion/)
-
-**Manage your tasks beautifully — with full CRUD, priority filters, and animated UI.**
-
-</div>
+Manage your tasks with full CRUD operations, priority filters, status tracking, and a responsive user interface.
 
 ---
 
 ## ✨ Features
 
-- 🆕 **Create Tasks** — Add tasks with title, description, priority, status & due date
-- ✏️ **Edit Tasks** — Update any task with a smooth modal form
-- 🗑️ **Delete Tasks** — Remove tasks with confirmation dialog
-- ✅ **Mark as Done** — Animated checkbox with strikethrough effect
-- 🎯 **Priority Levels** — Low / Medium / High with color-coded badges
-- 🔍 **Filter Tasks** — Filter by Priority and Status
-- 📊 **Stats Dashboard** — Total, Pending, Completed, High Priority counts
-- 🍃 **MongoDB Database** — Persistent storage with Mongoose
-- 🎨 **Animations** — Framer Motion throughout
-- 📱 **Responsive** — Mobile, tablet & desktop
+* Create Tasks
+* Edit Tasks
+* Delete Tasks
+* Mark Tasks as Completed
+* Priority Levels (Low, Medium, High)
+* Filter by Priority and Status
+* Dashboard Statistics
+* MongoDB Database Integration
+* Responsive Design
+* Smooth User Experience
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer | Technology |
-|-------|-----------|
-| **Framework** | Next.js 16 + React 19 |
-| **Language** | TypeScript 5.7 |
-| **Styling** | Tailwind CSS v4 + Framer Motion |
-| **Backend** | Next.js API Routes (built-in) |
-| **Database** | MongoDB + Mongoose |
-| **Package Manager** | pnpm |
+| Layer           | Technology            |
+| --------------- | --------------------- |
+| Frontend        | Next.js 16 + React 19 |
+| Language        | TypeScript            |
+| Styling         | Tailwind CSS          |
+| Backend         | Next.js API Routes    |
+| Database        | MongoDB + Mongoose    |
+| Package Manager | pnpm                  |
 
 ---
 
 ## 📁 Project Structure
 
-```
+```text
 task_manager_pro/
 ├── app/
 │   ├── api/tasks/
-│   │   ├── route.ts          # GET, POST
-│   │   └── [id]/route.ts     # PUT, DELETE
-│   ├── page.tsx              # Main UI
+│   │   ├── route.ts
+│   │   └── [id]/route.ts
+│   ├── page.tsx
 │   └── globals.css
 ├── components/
-│   ├── TaskItem.tsx          # Task card
-│   ├── TaskFormSimple.tsx    # Add/Edit form
-│   ├── FilterPanel.tsx       # Filters
-│   ├── Modal.tsx             # Modal
-│   └── ValidationAlert.tsx  # Alerts
+│   ├── TaskItem.tsx
+│   ├── TaskFormSimple.tsx
+│   ├── FilterPanel.tsx
+│   ├── Modal.tsx
+│   └── ValidationAlert.tsx
 ├── lib/
-│   ├── mongodb.ts            # DB connection
-│   └── models/Task.ts        # Mongoose schema
-├── .env.example              # Env template
-└── AI_USAGE.md               # AI documentation
+│   ├── mongodb.ts
+│   └── models/Task.ts
+├── .env.example
+└── README.md
 ```
 
 ---
@@ -73,119 +63,96 @@ task_manager_pro/
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) v18+
-- [pnpm](https://pnpm.io/) → `npm install -g pnpm`
-- [MongoDB](https://www.mongodb.com/try/download/community) (local)
+* Node.js v18+
+* pnpm
+* MongoDB
 
-### Steps
+### Installation
 
 ```bash
-# 1. Clone
 git clone https://github.com/paritagodhani/task_manager_pro.git
+
 cd task_manager_pro
 
-# 2. Install dependencies
 pnpm install
 
-# 3. Setup environment
 cp .env.example .env.local
-# Edit .env.local → add your MONGODB_URI
-
-# 4. Start MongoDB (separate terminal)
-mongod
-
-# 5. Run the app
-pnpm dev
 ```
 
-Open **http://localhost:3000** 🎉
-
----
-
-## 🔑 Environment Variables
-
-Create `.env.local` file:
+Update `.env.local`:
 
 ```env
 MONGODB_URI=mongodb://localhost:27017/task-manager
+```
+
+Start MongoDB:
+
+```bash
+mongod
+```
+
+Run the application:
+
+```bash
+pnpm dev
+```
+
+Open:
+
+```text
+http://localhost:3000
 ```
 
 ---
 
 ## 📡 API Endpoints
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `/api/tasks` | Fetch all tasks |
-| `GET` | `/api/tasks?priority=High&status=Pending` | Filtered tasks |
-| `POST` | `/api/tasks` | Create task |
-| `PUT` | `/api/tasks/:id` | Update task |
-| `DELETE` | `/api/tasks/:id` | Delete task |
-
-### POST Body Example
-
-```json
-{
-  "title": "Fix Login Bug",
-  "description": "Users getting 500 error on login page when wrong password entered",
-  "priority": "High",
-  "status": "Pending",
-  "dueDate": "2026-07-05"
-}
-```
+| Method | Endpoint       | Description   |
+| ------ | -------------- | ------------- |
+| GET    | /api/tasks     | Get all tasks |
+| POST   | /api/tasks     | Create a task |
+| PUT    | /api/tasks/:id | Update a task |
+| DELETE | /api/tasks/:id | Delete a task |
 
 ---
 
-## 🗂️ MongoDB Schema
+## 🗂️ Database Schema
 
-**Database:** `task-manager` | **Collection:** `tasks`
+| Field       | Type   |
+| ----------- | ------ |
+| title       | String |
+| description | String |
+| priority    | String |
+| status      | String |
+| dueDate     | Date   |
+| createdAt   | Date   |
+| updatedAt   | Date   |
 
-| Field | Type | Required | Validation |
-|-------|------|----------|------------|
-| `title` | String | ✅ | 3–100 chars |
-| `description` | String | ✅ | 10–1000 chars |
-| `priority` | String | ✅ | `Low` / `Medium` / `High` |
-| `status` | String | ✅ | `Pending` / `Completed` |
-| `dueDate` | Date | ✅ | Future date only |
-| `createdAt` | Date | Auto | Mongoose timestamp |
-| `updatedAt` | Date | Auto | Mongoose timestamp |
+### Priority Values
 
----
+* Low
+* Medium
+* High
 
-## 🧪 Add Sample Tasks (PowerShell)
+### Status Values
 
-```powershell
-$tasks = @(
-  @{ title="Fix Login Bug"; description="Users getting 500 error on login page when wrong password entered"; priority="High"; status="Pending"; dueDate="2026-07-05" },
-  @{ title="Add Dark Mode"; description="Implement dark mode toggle for entire application with preference saved"; priority="Medium"; status="Pending"; dueDate="2026-08-10" },
-  @{ title="Write API Docs"; description="Write complete documentation for all REST API endpoints with examples"; priority="Low"; status="Pending"; dueDate="2026-09-01" },
-  @{ title="Setup MongoDB"; description="Install and configure MongoDB with Mongoose connection for task manager"; priority="High"; status="Completed"; dueDate="2026-12-31" }
-)
-
-foreach ($task in $tasks) {
-  Invoke-RestMethod -Uri "http://localhost:3000/api/tasks" -Method POST -ContentType "application/json" -Body ($task | ConvertTo-Json)
-  Write-Host "Added: $($task.title)" -ForegroundColor Green
-}
-```
+* Pending
+* Completed
 
 ---
 
-## 🤖 AI Tools Used
+## 📱 Application Features
 
-See [AI_USAGE.md](./AI_USAGE.md) for full details on how AI assisted in building this project.
+* Task Creation
+* Task Editing
+* Task Deletion
+* Status Management
+* Priority Management
+* Task Filtering
+* Dashboard Statistics
+* Responsive Layout
+* MongoDB Data Persistence
 
 ---
 
-## 📄 License
-
-MIT License — free to use and modify.
-
----
-
-<div align="center">
-
-Made with ❤️ using **Next.js** + **MongoDB** + **Framer Motion**
-
-⭐ **Star this repo if you found it helpful!**
-
-</div>
+### Developed using Next.js, TypeScript, Tailwind CSS, and MongoDB.
