@@ -6,6 +6,16 @@ Manage your tasks with full CRUD operations, priority filters, status tracking, 
 
 ---
 
+## 📸 Screenshots
+
+### 💻 Desktop Dashboard
+![Desktop View](public/screenshots/home.png)
+
+### 📝 Create / Edit Task Form
+![Task Form Modal](public/screenshots/form.png)
+
+---
+
 ## ✨ Features
 
 * Create Tasks
